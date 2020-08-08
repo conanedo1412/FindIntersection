@@ -1,0 +1,12 @@
+def FindIntersection(strArr):
+  first, second = strArr
+  first_seperated = first.split(', ')
+  second_seperated = second.split(', ')
+  result = set(first_seperated).intersection(set(second_seperated))
+  if result == set():
+    return "false"
+  final_result = sorted(result)
+  return ','.join(final_result)
+
+# keep this function call here 
+print(FindIntersection(input()))
